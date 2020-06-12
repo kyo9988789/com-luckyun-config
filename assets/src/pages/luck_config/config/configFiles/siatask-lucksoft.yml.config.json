@@ -1,0 +1,30 @@
+[
+  {
+    "field": "spring|datasource|driver-class-name",
+    "label": "SIA数据库驱动",
+    "type": "input",
+    "defaultValue": "com.mysql.cj.jdbc.Driver",
+    "required": true
+  },
+  {
+    "field": "spring|datasource|url",
+    "label": "SIA数据库URL",
+    "type": "input",
+    "defaultValue": "jdbc:mysql://10.10.10.251:3305/activiti6-njqsmis?",
+    "required": true
+  },
+  {
+    "field": "spring|datasource|username",
+    "label": "SIA数据库用户名",
+    "type": "input",
+    "defaultValue": "root",
+    "required": true
+  },
+  {
+    "field": "spring|datasource|password",
+    "label": "SIA数据库密码",
+    "type": "input",
+    "defaultValue": "luckserver",
+    "required": true
+  }
+]

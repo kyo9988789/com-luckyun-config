@@ -1,0 +1,30 @@
+[
+  {
+    "field": "spring|datasource|driver-class-name",
+    "label": "BPM数据库驱动",
+    "type": "input",
+    "defaultValue": "com.mysql.cj.jdbc.Driver",
+    "required": true
+  },
+  {
+    "field": "spring|datasource|url",
+    "label": "BPM数据库URL",
+    "type": "input",
+    "defaultValue": "jdbc:mysql://10.10.10.251:3305/activiti6-njqsmis?useUnicode=true&characterEncoding=utf-8&serverTimezone=CTT&useSSL=false",
+    "required": true
+  },
+  {
+    "field": "spring|datasource|username",
+    "label": "BPM数据库用户名",
+    "type": "input",
+    "defaultValue": "root",
+    "required": true
+  },
+  {
+    "field": "spring|datasource|password",
+    "label": "BPM数据库密码",
+    "type": "input",
+    "defaultValue": "luckserver",
+    "required": true
+  }
+]

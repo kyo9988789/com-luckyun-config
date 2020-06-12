@@ -1,0 +1,95 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: luckyun-simple-getway #应用名称
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+      location: ${oss.uploadtemp}    #/data/upload_temp   #d:/upload_temp
+  redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: 1
+  datasource:
+    driver-class-name: ${base.driver}
+    url: ${base.url}
+    username: ${base.username}
+    password: ${base.password}
+  key-redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: 2
+  rabbitmq:
+    host: ${rabbitmq.host}
+    port: ${rabbitmq.port}
+    username: ${rabbitmq.username}
+    password: ${rabbitmq.password}
+    virtual-host: ${rabbitmq.vhost}
+  #国际化配置
+  messages:
+      basename: i18n/base/basecommon
+basecommon: 
+  pre-oss-url: /api/oss
+zuul:
+  routes:
+    base:
+      service-id: luckyun-simple-getway
+    auth: 
+      service-id: luckyun-simple-getway
+    qsmis:
+      service-id: luckyun-njdtqsmis
+    oss: 
+      service-id: luckyun-oss-pro   #http://10.10.10.52:31230
+    sia:
+      service-id: sia-task-config
+      
+  sensitive-headers:
+  - Access-Control-Allow-Origin
+  ignored-headers:
+  - Access-Control-Allow-Origin
+  ratelimit: 
+    enabled: ${zuul.ratelimit}
+    repository: redis
+    policy-list:
+      auth:
+        - limit: 1
+          refresh-interval: ${zuul.refresh.interval}
+          type:
+            - url
+      base:
+        - limit: 1
+          refresh-interval: ${zuul.refresh.interval}
+          type:
+            - url
+  host: 
+    connect-timeout-millis: 60000
+    connection-request-timeout-millis: 6000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+    ReadTimeout: 60000
+    ConnectionTimeout: 60000
+# 拦截开放的地址
+common: 
+  dev-mode: debug
+  release-user: administrator
+  no-interceptor-url:
+    - loginin
+    - company/sysCompany/readByUser
+    - oss/show/img
+logging:
+  level:
+    root: info
+application:
+  servernm:
+    luckyun-base: luckyun-simple-getway
+    luckyun-auth: luckyun-simple-getway

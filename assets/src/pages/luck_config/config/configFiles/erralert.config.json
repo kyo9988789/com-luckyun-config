@@ -1,0 +1,48 @@
+[
+  {
+    "field": "erralert|admin-role-name",
+    "label": "告警管理员角色名称",
+    "type": "input",
+    "defaultValue": "告警管理员",
+    "required": true
+  },
+  {
+    "field": "alert|send-type",
+    "label": "告警方式(多个以','分隔)",
+    "type": "input",
+    "defaultValue": "mail,sms",
+    "required": true
+  },
+  {
+    "field": "alert|keep|time",
+    "label": "告警时间间隔(秒)",
+    "type": "input",
+    "defaultValue": 30,
+    "required": true
+  },
+  {
+    "field": "spring|mail|host",
+    "label": "邮件服务器地址",
+    "type": "input",
+    "required": true
+  },
+  {
+    "field": "spring|mail|port",
+    "label": "邮件服务器端口",
+    "type": "input",
+    "defaultValue": "25",
+    "required": true
+  },
+  {
+    "field": "spring|mail|username",
+    "label": "邮件服务账号",
+    "type": "input",
+    "required": true
+  },
+  {
+    "field": "spring|mail|password",
+    "label": "邮件服务密码",
+    "type": "input",
+    "required": true
+  }
+]

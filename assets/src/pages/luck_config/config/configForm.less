@@ -1,0 +1,18 @@
+.configForm {
+
+  .addItem {
+    display: flex;
+    align-items: center;
+    height: 32px !important;
+
+    .fieldInput {
+      width: 90%;
+    }
+
+    :global {
+      .ant-form-item-label > label::after {
+        top: -2px;
+      }
+    }
+  }
+}

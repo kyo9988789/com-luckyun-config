@@ -1,0 +1,32 @@
+[
+  {
+    "field": "rabbitmq|host",
+    "label": "主机",
+    "type": "input",
+    "required": true
+  },
+  {
+    "field": "rabbitmq|port",
+    "label": "端口",
+    "type": "input",
+    "required": true
+  },
+  {
+    "field": "rabbitmq|username",
+    "label": "用户名",
+    "type": "input",
+    "required": true
+  },
+  {
+    "field": "rabbitmq|password",
+    "label": "密码",
+    "type": "input",
+    "required": true
+  },
+  {
+    "field": "rabbitmq|vhost",
+    "label": "vhost",
+    "type": "input",
+    "required": true
+  }
+]

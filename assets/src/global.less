@@ -1,0 +1,90 @@
+@import '~antd/es/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@thumbColor: #d9d9d9;
+@thumbHoverColor: #7d7d7d;
+.scrollbar() {
+  width: 10px;
+  height: 10px;
+}
+.scrollbarThumb(@borderColor: #fff) {
+  background: @thumbColor;
+  border: @borderColor 0 solid;
+  border-radius: 7px;
+}
+.scrollbarThumbHover() {
+  background: @thumbHoverColor;
+}
+
+&::-webkit-scrollbar {
+  .scrollbar();
+}
+&::-webkit-scrollbar-thumb {
+  .scrollbarThumb(#f0f2f5);
+}
+&::-webkit-scrollbar-thumb:hover {
+  .scrollbarThumbHover();
+}
+
+:global {
+  .ant-menu-root::-webkit-scrollbar {
+    .scrollbar();
+  }
+  .ant-menu-root::-webkit-scrollbar-thumb {
+    .scrollbarThumb(#020b16);
+  }
+  .ant-menu-root::-webkit-scrollbar-thumb:hover {
+    .scrollbarThumbHover();
+  }
+  .ant-spin-nested-loading {
+    height: 100%;
+    .ant-spin-container {
+      height: 100%;
+    }
+  }
+}

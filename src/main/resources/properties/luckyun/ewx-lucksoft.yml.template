@@ -1,0 +1,86 @@
+#tomcat 相关配置
+#端口号
+server: 
+  port: 8088
+# THYMELEAF 
+spring: 
+  application:
+    name: ewx
+  redis:
+    database: 1
+    host: ${redis.host:10.10.10.81}
+    port: ${redis.port:30000}
+    password: ${redis.password:luckserver}
+  key-redis:
+    host: ${redis.host:localhost}
+    port: ${redis.port:6379}
+    password: ${redis.password:luckserver}
+    database: 2
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.10.10.81:3306/frame_cloudgllq2.0.0?useUnicode=true&characterEncoding=utf-8&serverTimezone=CTT
+    username: root
+    password: luckserver
+  security:
+    filter:
+      dispatcher-types:
+      - forward
+      - include
+      - request
+      - async
+      - error
+#日志配置
+logging: 
+  config: classpath:logback-spring.xml
+  level: 
+    com.lucksoft.ewx: info
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:20000}/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+key-table-filter:
+  tables: logging_event,logging_event_exception,logging_event_property,sys_user_log,sys_log,sys_log_field
+ewx:
+  access_token_url: https://qyapi.weixin.qq.com/cgi-bin/gettoken
+  refresh_token_url: https://api.weixin.qq.com/sns/oauth2/refresh_token
+  access_token_create_url: https://api.weixin.qq.com/cgi-bin/token
+  jsapi_ticket: https://qyapi.weixin.qq.com/cgi-bin/get_jsapi_ticket
+  menu_create_url: https://api.weixin.qq.com/cgi-bin/menu/create
+  menu_get_url: https://api.weixin.qq.com/cgi-bin/menu/get
+  menu_delete_url: https://api.weixin.qq.com/cgi-bin/menu/delete
+
+  media_upload_url: http://file.api.weixin.qq.com/cgi-bin/media/upload
+  qrcode_create_url: https://api.weixin.qq.com/cgi-bin/qrcode/create
+  showqrcode_url: https://mp.weixin.qq.com/cgi-bin/showqrcode
+
+  user_info_sns_url: https://api.weixin.qq.com/sns/userinfo
+  user_id_url: https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo
+  user_info_batchget_url: https://api.weixin.qq.com/cgi-bin/user/info/batchget
+  user_get_url: https://api.weixin.qq.com/cgi-bin/user/get
+
+  groups_get_url: https://api.weixin.qq.com/cgi-bin/groups/get
+  groups_getid_url: https://api.weixin.qq.com/cgi-bin/groups/getid
+  groups_create_ur: https://api.weixin.qq.com/cgi-bin/groups/create
+  groups_update_url: https://api.weixin.qq.com/cgi-bin/groups/update
+  groups_delete_url: https://api.weixin.qq.com/cgi-bin/groups/delete
+  groups_members_update_url: https://api.weixin.qq.com/cgi-bin/groups/members/update
+  message_mass_sendall_url: https://api.weixin.qq.com/cgi-bin/message/mass/sendall
+  message_mass_send_url: https://api.weixin.qq.com/cgi-bin/message/mass/send
+  message_mass_delete_url: https://api.weixin.qq.com/cgi-bin/message/mass/delete
+  message_mass_get_url: https://api.weixin.qq.com/cgi-bin/message/mass/get
+
+  message_custom_send_url: https://api.weixin.qq.com/cgi-bin/message/custom/send
+  template_send_url: https://api.weixin.qq.com/cgi-bin/message/template/send
+  template_list: https://api.weixin.qq.com/cgi-bin/template/get_all_private_template
+
+  mmpaymkttransfers_sendredpack_url: https://api.mch.weixin.qq.com/mmpaymkttransfers/sendredpack
+
+  #跳转的host地址
+  redirect_url: http://gllq-qywx.lucksoft.com.cn/ewx
+  #前端的跳转地址
+  front_redirect_url: http://gllq-qywx.lucksoft.com.cn
+  #前端的登陆地址
+  front_redirect_login_url: http://gllq-qywx.lucksoft.com.cn

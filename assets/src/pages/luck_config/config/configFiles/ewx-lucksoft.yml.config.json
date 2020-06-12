@@ -1,0 +1,23 @@
+[
+  {
+    "field": "ewx|redirect_url",
+    "label": "跳转的host地址",
+    "type": "input",
+    "defaultValue": "http://gllq-qywx.lucksoft.com.cn/ewx",
+    "required": true
+  },
+  {
+    "field": "ewx|front_redirect_url",
+    "label": "前端的跳转地址",
+    "type": "input",
+    "defaultValue": "http://gllq-qywx.lucksoft.com.cn",
+    "required": true
+  },
+  {
+    "field": "ewx|front_redirect_login_url",
+    "label": "前端的登陆地址",
+    "type": "input",
+    "defaultValue": "http://gllq-qywx.lucksoft.com.cn",
+    "required": true
+  }
+]

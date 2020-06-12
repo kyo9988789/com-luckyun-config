@@ -1,0 +1,58 @@
+[
+  {
+    "field": "sia|task|zookeeper",
+    "label": "zookeeper",
+    "type": "input",
+    "defaultValue": "10.10.10.52:5586",
+    "required": true
+  },
+  {
+    "field": "oss|uploadtemp",
+    "label": "上传缓存路径",
+    "type": "input",
+    "defaultValue": "/data/upload_temp",
+    "required": true
+  },
+  {
+    "field": "oss|upload",
+    "label": "上传路径",
+    "type": "input",
+    "defaultValue": "/data/upload",
+    "required": true
+  },
+  {
+    "field": "elk|append|url",
+    "label": "ELK日志地址",
+    "type": "input",
+    "defaultValue": "10.10.10.81:5044",
+    "required": true
+  },
+  {
+    "field": "zuul|ratelimit",
+    "label": "开启限流",
+    "type": "switch",
+    "defaultValue": true,
+    "required": true
+  },
+  {
+    "field": "zuul|refresh|interval",
+    "label": "请求间隔（秒）",
+    "type": "input",
+    "defaultValue": "1",
+    "required": true
+  },
+  {
+    "field": "zuul|stream|limit",
+    "label": "请求频率限制（次/请求间隔）",
+    "type": "input",
+    "defaultValue": "3",
+    "required": true
+  },
+  {
+    "field": "zipkin|url",
+    "label": "链路追踪服务地址",
+    "type": "input",
+    "defaultValue": "http://localhost:9411",
+    "required": true
+  }
+]

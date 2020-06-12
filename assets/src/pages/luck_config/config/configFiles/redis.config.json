@@ -1,0 +1,20 @@
+[
+  {
+    "field": "redis|host",
+    "label": "主机",
+    "type": "input",
+    "required": true
+  },
+  {
+    "field": "redis|port",
+    "label": "端口",
+    "type": "input",
+    "required": true
+  },
+  {
+    "field": "redis|password",
+    "label": "密码",
+    "type": "input",
+    "required": true
+  }
+]

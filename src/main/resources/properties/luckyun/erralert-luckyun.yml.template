@@ -1,0 +1,46 @@
+server:
+  port: 20001
+spring:
+  application:
+    name: com-luckyun-alert #应用名称
+  datasource:
+    driver-class-name: ${erralert.driver}
+    url: ${erralert.url}
+    username: ${erralert.username}
+    password: ${erralert.password}
+  redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: 1
+  key-redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: 2
+  rabbitmq:
+    host: ${rabbitmq.host}
+    port: ${rabbitmq.port}
+    username: ${rabbitmq.username}
+    password: ${rabbitmq.password}
+    virtual-host: ${rabbitmq.vhost}
+  mail:
+      host: ${alert.mail.host}
+      username: ${alert.mail.username}
+      password: ${alert.mail.password}
+      port: ${alert.mail.port}
+      default-encoding: UTF-8
+      properties:
+        mail:
+          smtp:
+            socketFactory.class: javax.net.ssl.SSLSocketFactory
+#alert:
+#  driver: com.luckyun.erralert.sender.EmailSender
+
+#告警提醒方式
+alert:
+  send-type: mail,sms
+  keep:
+    time: ${erralert.keep.time}
+  mail: com.luckyun.event.EurekaStateChangeListener,
+  sms:

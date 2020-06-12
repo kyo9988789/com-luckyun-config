@@ -1,0 +1,32 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: luckyun-config
+  profiles:
+    active: dev,native  # 配置使用本地储存
+  redis:
+    host: ${redis.host:127.0.0.1}
+    port: ${redis.port:6379}
+    password: ${redis.password:luckserver}
+    database: 15
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:properties/,classpath:properties/luckyun/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:20000}/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+common: 
+  eureka-instance: 
+    host: ${eureka.host:127.0.0.1}
+    port: ${eureka.port:20000}
+    
+
+  
+  

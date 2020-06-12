@@ -1,0 +1,34 @@
+[
+  {
+    "field": "other|name",
+    "label": "业务名称",
+    "type": "input",
+    "required": true
+  },
+  {
+    "field": "other|alias",
+    "label": "业务标识",
+    "type": "input",
+    "required": true
+  },
+  {
+    "field": "spring|datasource|driver-class-name",
+    "label": "数据库驱动",
+    "type": "input"
+  },
+  {
+    "field": "spring|datasource|url",
+    "label": "数据库URL",
+    "type": "input"
+  },
+  {
+    "field": "spring|datasource|username",
+    "label": "数据库用户名",
+    "type": "input"
+  },
+  {
+    "field": "spring|datasource|password",
+    "label": "数据库密码",
+    "type": "input"
+  }
+]

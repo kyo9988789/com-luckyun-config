@@ -1,0 +1,35 @@
+server:
+  port: 9096
+spring:
+  application:
+    name: luckyun-base #应用名称
+  datasource:
+    driver-class-name: ${base.driver}
+    url: ${base.url}
+    username: ${base.username}
+    password: ${base.password}
+  redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: 1
+  key-redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: 2
+  rabbitmq:
+    host: ${rabbitmq.host}
+    port: ${rabbitmq.port}
+    username: ${rabbitmq.username}
+    password: ${rabbitmq.password}
+    virtual-host: ${rabbitmq.vhost}
+  #国际化配置
+  messages:
+      basename: i18n/base/basecommon
+basecommon: 
+  pre-oss-url: /api/oss
+systeminfo: 
+  show-recycle: 1
+  system-name: 基础系统
+  system-descript: 主要是一些基础模快的功能管理 #简单描述

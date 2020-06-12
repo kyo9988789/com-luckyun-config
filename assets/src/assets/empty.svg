@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="133px" height="160px" viewBox="0 0 133 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="东北-----计划管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="计划管理/增补计划-初始页面" transform="translate(-782.000000, -404.000000)">
+            <g id="Group-2" transform="translate(782.000000, 404.000000)">
+                <rect id="Rectangle" stroke="#D4D4D4" stroke-width="3" fill="#F5F5F5" x="19.5" y="1.5" width="112" height="138" rx="3"></rect>
+                <rect id="Rectangle-Copy-6" fill="#ECECEC" x="21" y="12" width="104" height="126" rx="3"></rect>
+                <g id="Group" transform="translate(0.000000, 16.000000)">
+                    <path d="M1.5,113.816173 L30.0353681,142.5 L114,142.5 C114.828427,142.5 115.5,141.828427 115.5,141 L115.5,3 C115.5,2.17157288 114.828427,1.5 114,1.5 L3,1.5 C2.17157288,1.5 1.5,2.17157288 1.5,3 L1.5,113.816173 Z" id="Rectangle" stroke="#D4D4D4" stroke-width="3" fill="#FFFFFF"></path>
+                    <path d="M14,25 L62,25 L62,32 L14,32 L14,25 Z M14,44 L104,44 L104,48 L14,48 L14,44 Z M14,60 L104,60 L104,64 L14,64 L14,60 Z M14,76 L104,76 L104,80 L14,80 L14,76 Z M14,92 L104,92 L104,96 L14,96 L14,92 Z M53,108 L104,108 L104,112 L53,112 L53,108 Z" id="Combined-Shape" fill="#ECECEC"></path>
+                    <path d="M3,109 L30.0289431,109 C34.5211153,109.149192 36.7672014,111.27918 36.7672014,115.389964 C36.7672014,119.500748 36.7672014,128.094363 36.7672014,141.17081 L30.0289431,141.17081 L3,114.035504 L3,109 Z" id="Path-2" fill="#F3F3F3"></path>
+                    <path d="M5.68288046,114.5 C5.28505573,114.5 4.90352486,114.658035 4.62222029,114.93934 C4.03643385,115.525126 4.03643385,116.474874 4.62222029,117.06066 L27.6966991,140.135139 C27.9780037,140.416444 28.3595346,140.574479 28.7573593,140.574479 C29.5857864,140.574479 30.2573593,139.902906 30.2573593,139.074479 L30.2573593,116 C30.2573593,115.171573 29.5857864,114.5 28.7573593,114.5 L5.68288046,114.5 Z" id="Rectangle" stroke="#D4D4D4" stroke-width="3" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

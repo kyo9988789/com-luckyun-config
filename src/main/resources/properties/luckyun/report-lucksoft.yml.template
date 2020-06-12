@@ -1,0 +1,34 @@
+server:
+  port: 9093
+spring: 
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss   
+    time-zone: GMT+8
+  datasource:
+    driver-class-name: ${base.driver}
+    url: ${base.url}
+    username: ${base.username}
+    password: ${base.password}
+  redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: 1
+  key-redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: 2
+  rabbitmq:
+    host: ${rabbitmq.host}
+    port: ${rabbitmq.port}
+    username: ${rabbitmq.username}
+    password: ${rabbitmq.password}
+    virtual-host: ${rabbitmq.vhost}
+  jpa:
+    show-sql: false
+  servlet:    multipart: 
+      max-file-size: 100MB
+      max-request-size: 100MB      location: ${oss.uploadtemp}
+common: 
+  template-cache-path: ${oss.uploadtemp} 

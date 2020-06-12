@@ -1,0 +1,31 @@
+.topBox {
+  padding: 0 8px;
+}
+
+.chosen{
+  border-right: 2px dashed #1890ff;
+}
+
+.cardList {
+  flex-shrink: 0;
+
+  :global {
+    .ant-spin-nested-loading {
+      height: 100%;
+    }
+    .ant-spin-container {
+      height: 100%;
+    }
+  }
+
+  .cardPaginationBox {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100% - 32px);
+    padding: 16px;
+    background: #fff;
+  }
+}

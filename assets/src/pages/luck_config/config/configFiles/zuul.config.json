@@ -1,0 +1,35 @@
+[
+  {
+    "field": "zuul|ratelimit|enabled",
+    "label": "启用限流",
+    "type": "switch",
+    "required": true
+  },
+  {
+    "field": "common|no-interceptor-url",
+    "label": "放行地址(完全匹配,多个以','隔开)",
+    "type": "input",
+    "defaultValue": "loginin,company/sysCompany/readByUser,oss/show/img",
+    "required": false
+  },
+  {
+    "field": "common|container",
+    "label": "放行地址(包含,多个以','隔开)",
+    "type": "input",
+    "defaultValue": "/druid,/oss/upload,/sia,/api,/demo",
+    "required": false
+  },
+  {
+    "field": "common|startwith",
+    "label": "放行地址(以…开头,多个以','隔开)",
+    "type": "input",
+    "defaultValue": "noGetway",
+    "required": false
+  },
+  {
+    "field": "common|no-interceptor|endwith",
+    "label": "放行地址(以…结尾,多个以','隔开)",
+    "type": "input",
+    "required": false
+  }
+]

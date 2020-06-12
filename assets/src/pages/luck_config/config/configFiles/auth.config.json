@@ -1,0 +1,35 @@
+[
+  {
+    "field": "common|is-single-login",
+    "label": "启用排它登录",
+    "type": "switch",
+    "required": true
+  },
+  {
+    "field": "common|release-user",
+    "label": "超级管理员",
+    "type": "input",
+    "defaultValue": "administrator",
+    "required": true
+  },
+  {
+    "field": "common|no-interceptor|container",
+    "label": "放行地址(包含,多个以','隔开)",
+    "type": "input",
+    "defaultValue": "/bpm",
+    "required": false
+  },
+  {
+    "field": "common|no-interceptor|startwith",
+    "label": "放行地址(以…开头,多个以','隔开)",
+    "type": "input",
+    "defaultValue": "noAuth",
+    "required": false
+  },
+  {
+    "field": "common|no-interceptor|endwith",
+    "label": "放行地址(以…结尾,多个以','隔开)",
+    "type": "input",
+    "required": false
+  }
+]

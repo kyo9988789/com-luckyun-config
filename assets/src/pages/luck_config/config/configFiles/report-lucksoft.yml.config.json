@@ -1,0 +1,9 @@
+[
+  {
+    "field": "spring|servlet|multipart|max-file-size",
+    "label": "最大文件大小",
+    "type": "input",
+    "defaultValue": "100MB",
+    "required": true
+  }
+]

@@ -1,0 +1,93 @@
+server:
+  port: 9998
+spring:
+  application:
+    name: luckyun-getway #应用名称
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      location: ${oss.uploadtemp}
+  redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: 1
+zuul:
+  routes:
+    base:
+      service-id: luckyun-base
+    auth: 
+      service-id: luckyun-auth
+    qsmis:
+      service-id: luckyun-njdtqsmis
+    oss: 
+      service-id: luckyun-oss-pro   #http://10.10.10.52:31230
+    sia:
+      service-id: sia-task-config
+    report: 
+      service-id: luckyun-report
+      
+  sensitive-headers:
+  - Access-Control-Allow-Origin
+  ignored-headers:
+  - Access-Control-Allow-Origin
+  ratelimit:
+    enabled: ${zuul.ratelimit}
+    # 对应存储类型(用来统计存储统计信息)
+    repository: REDIS
+    policy-list:
+      auth:
+        # 每秒允许多少个请求
+        - limit: 1
+          # 刷新时间(单位秒)
+          refresh-interval: ${zuul.refresh.interval}
+          # 根据什么统计
+          type:
+            - url
+      base:
+        - limit: 1
+          refresh-interval: ${zuul.refresh.interval}
+          type:
+            - url
+  host:
+    connect-timeout-millis: 102000
+    connection-request-timeout-millis: 102000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 102000
+ribbon:
+    ReadTimeout: 50000
+    ConnectionTimeout: 30000
+    
+# 拦截开放的地址
+common:
+  auth-url: http://localhost:9090/auth #http://10.10.10.52:30914/auth
+  no-interceptor-url:
+    - loginin
+    - company/sysCompany/readByUser
+    - oss/show/img
+  container:
+    - /druid
+    - /oss/upload
+    - /sia
+    - /api
+    - /demo
+  startwith:
+    - noGetway
+  endwith: 
+    - 
+  header-not-interceptor: luckyun-not-interceptor #作为放在header上面,当值未true时不进行拦截 luckyun-not-interceptor:true
+logging:
+  level:
+    root: info
+luckyun: 
+  is-old-server: false #是否为老服务
+#application:
+#  servernm:
+#    luckyun-base: luckyun-base
+#    luckyun-auth: luckyun-auth

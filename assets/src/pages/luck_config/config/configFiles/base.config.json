@@ -1,0 +1,16 @@
+[
+  {
+    "field": "basecommon|password-level",
+    "label": "密码强度(1-5,越大越强)",
+    "type": "input",
+    "defaultValue": "5",
+    "required": true
+  },
+  {
+    "field": "systeminfo|show-recycle",
+    "label": "进入回收站",
+    "type": "switch",
+    "defaultValue": true,
+    "required": true
+  }
+]

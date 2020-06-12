@@ -1,0 +1,30 @@
+[
+  {
+    "field": "base|driver",
+    "label": "Driver",
+    "type": "input",
+    "defaultValue": "com.mysql.cj.jdbc.Driver",
+    "required": true
+  },
+  {
+    "field": "base|url",
+    "label": "URL",
+    "type": "input",
+    "defaultValue": "jdbc:mysql://10.10.10.81:3306/luckyun?useUnicode=true&characterEncoding=utf-8&serverTimezone=CTT",
+    "required": true
+  },
+  {
+    "field": "base|username",
+    "label": "用户名",
+    "type": "input",
+    "defaultValue": "root",
+    "required": true
+  },
+  {
+    "field": "base|password",
+    "label": "密码",
+    "type": "input",
+    "defaultValue": "luckserver",
+    "required": true
+  }
+]

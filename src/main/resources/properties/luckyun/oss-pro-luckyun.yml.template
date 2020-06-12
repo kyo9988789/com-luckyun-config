@@ -1,0 +1,53 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: luckyun-oss-pro
+  jmx:
+    enabled: false
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  datasource:
+    driver-class-name: ${base.driver}
+    url: ${base.url}
+    username: ${base.username}
+    password: ${base.password}
+  redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: 1
+  key-redis:
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: 2
+  rabbitmq:
+    host: ${rabbitmq.host}
+    port: ${rabbitmq.port}
+    username: ${rabbitmq.username}
+    password: ${rabbitmq.password}
+    virtual-host: ${rabbitmq.vhost}  
+
+oss: 
+  upload-path: ${oss.upload} #/data/upload/ #D:\FileManager\
+  
+im4: 
+  win: D:/ImageMagick/708Q16 #windows下面安装的imageMagick路径
+  watermark: D:/filetest/watermark.png #水印图片
+  
+jodconverter:
+  local:
+    enabled: true
+    office-home: D:/ImageMagick/OpenOffice4 
+    port-numbers: 10001, 10002, 10003, 10004, 10005, 10006, 10007, 10008, 10009, 10010
+    max-tasks-per-process: 10
+ftpserver: #ftp服务器配置
+  server-start: true #ftp服务是否启动
+  server-port: 20101 #ftp端口
+  server-root : ${oss.upload} #/data/upload/ #D:\FileManager #ftp上传的路径
+  server-user : root #登录账号
+  server-pass : 123456 #登录密码
